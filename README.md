@@ -89,6 +89,9 @@ render() {
 ## License
 [MIT](https://github.com/manenga/react-native-tabbed-control/blob/master/LICENSE) license.
 
+## From Developers
+Made with ♥ by [Manenga](https://linkedin.com/in/mungandi/)
+
 ## TO-DO's:
 - [X] onIndexChange when a tab is tapped
 - [ ] Add icons as tab titles
