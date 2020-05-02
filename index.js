@@ -11,11 +11,17 @@ import {
 class SegmentControl extends Component {
   state = {
     scrollX: new Animated.Value(0),
-    containerWidth: 0
+    containerWidth: 0,
+    selectedIndex: 0
   };
 
+  onIndexChange(selectedIndex){
+    // TODO: Update state
+    // this.setState({selectedIndex: selectedIndex});
+  }
+
   render() {
-    const { segments = [], color = "#4549D1" } = this.props;
+    const { segments = [], color = "#4549D1", onIndexChange = onIndexChange(0)} = this.props;
     const numberOfSegments = segments.length;
     const { containerWidth } = this.state;
 
@@ -100,6 +106,8 @@ class SegmentControl extends Component {
       <TouchableOpacity
         style={styles.headerItem}
         onPress={() => {
+          // TODO: Update state
+          this.props.onIndexChange(index);
           this.scrollView.scrollTo({
             x: index * this.state.containerWidth,
             y: 0,
@@ -113,6 +121,7 @@ class SegmentControl extends Component {
     );
   };
 
+  // TODO: Update selectedIndex
   handleOnScroll = x => {
     const mover = Animated.event([
       { nativeEvent: { contentOffset: { x: this.state.scrollX } } }
