@@ -76,6 +76,20 @@ render() {
 | color | Color | NO |
 | onIndexChange | Function | NO |
 
+## How can I support the developers?
+- Star our GitHub repo ⭐
+- Create pull requests, submit bugs, suggest new features or documentation updates 🔧
+- Follow me on [Twitter](https://twitter.com/mmungandi)
+- Follow me on [Instagram](https://instagram.com/mungandi)
+- [Donate](https://paypal.me/Mungandi)
+
+## More from the developers
+- [Rona Mobile App](https://github.com/manenga/Rona/) - Covid19 Global Pandemic Statistics Tracker
+
+## License
+[MIT](https://github.com/manenga/react-native-tabbed-control/blob/master/LICENSE) license.
+
 ## TO-DO's:
+- [X] onIndexChange when a tab is tapped
 - [ ] Add icons as tab titles
 - [ ] Update selected index on scroll
