@@ -81,7 +81,7 @@ render() {
 - Create pull requests, submit bugs, suggest new features or documentation updates 🔧
 - Follow me on [Twitter](https://twitter.com/mmungandi)
 - Follow me on [Instagram](https://instagram.com/mungandi)
-- [Donate](https://paypal.me/Mungandi)
+- Buy me coffee or [Donate](https://paypal.me/Mungandi)
 
 ## More from the developers
 - [Rona Mobile App](https://github.com/manenga/Rona/) - Covid19 Global Pandemic Statistics Tracker
