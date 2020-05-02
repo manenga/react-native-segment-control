@@ -90,7 +90,7 @@ render() {
 [MIT](https://github.com/manenga/react-native-tabbed-control/blob/master/LICENSE) license.
 
 ## From Developers
-Made with ♥ by [Manenga](https://linkedin.com/in/mungandi/)
+Made with ♥ by [Manenga](https://linkedin.com/in/mungandi/). Support me by making a [donation](https://paypal.me/Mungandi)
 
 ## TO-DO's:
 - [X] onIndexChange when a tab is tapped
