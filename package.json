@@ -1,7 +1,7 @@
 {
-  "name": "react-native-segment-control",
-  "version": "1.1.0",
-  "description": "Forked from Ainur Baizhumanova",
+  "name": "react-native-tabbed-control",
+  "version": "1.1.6",
+  "description": "Swipeable tab bar control component for React Native apps.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,21 +11,22 @@
     "url": "git+https:/github.com/manenga/react-native-segment-control.git"
   },
   "keywords": [
+    "tab",
+    "tabs",
     "segment",
     "control",
+    "animated",
     "swipe",
     "slide",
-    "tabbar",
-    "tab",
-    "animated"
+    "tabbar"
   ],
-  "author": "Ainur Baizhumanova",
+  "author": "Manenga Mungandi",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/manenga/react-native-segment-control/issues"
   },
   "homepage": "https://github.com/manenga/react-native-segment-control#readme",
   "dependencies": {
-    "hoek": "^5.0.4"
+    "hoek": "^6.0.0"
   }
 }

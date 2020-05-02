@@ -8,28 +8,26 @@ import {
   TouchableOpacity
 } from "react-native";
 
-class SegmentControl extends Component {
+export default class TabbedControl extends Component {
   state = {
     scrollX: new Animated.Value(0),
-    containerWidth: 0,
-    selectedIndex: 0
+    containerWidth: 0
   };
 
-  onIndexChange(selectedIndex){
-    // TODO: Update state
-    // this.setState({selectedIndex: selectedIndex});
+  onIndexChange(){	
+    // TODO: Update state	
   }
 
   render() {
-    const { segments = [], color = "#4549D1", onIndexChange = onIndexChange(0)} = this.props;
-    const numberOfSegments = segments.length;
+    const { tabs = [], color = "#4549D1", onIndexChange = onIndexChange(0) } = this.props;
+    const numberOfSegments = tabs.length;
     const { containerWidth } = this.state;
 
     const activeMargin = this.state.scrollX.interpolate({
       inputRange: [0, (numberOfSegments - 1) * containerWidth],
       outputRange: [
         0,
-        ((numberOfSegments - 1) * containerWidth) / numberOfSegments
+        (numberOfSegments - 1) * containerWidth / numberOfSegments
       ]
     });
 
@@ -43,8 +41,10 @@ class SegmentControl extends Component {
       >
         <View style={styles.container}>
           <View style={styles.headerContainer}>
-            {segments.map((segment, index) =>
-              this.renderSegment(numberOfSegments, segment.title, index)
+            {tabs.map((segment, index) =>
+              {
+                return this.renderSegment(numberOfSegments, segment.title, index);
+              }
             )}
           </View>
 
@@ -68,10 +68,10 @@ class SegmentControl extends Component {
             showsHorizontalScrollIndicator={false}
             ref={ref => (this.scrollView = ref)}
           >
-            {segments.map((segment, index) => {
+            {tabs.map((segment, index) => {
               return (
                 <View style={{ width: containerWidth }} key={index}>
-                  {React.createElement(segment.view, segment.viewProps)}
+                  {segment.view && segment.view(segment.viewProps)}
                 </View>
               );
             })}
@@ -106,7 +106,7 @@ class SegmentControl extends Component {
       <TouchableOpacity
         style={styles.headerItem}
         onPress={() => {
-          // TODO: Update state
+          // TODO: Update state	
           this.props.onIndexChange(index);
           this.scrollView.scrollTo({
             x: index * this.state.containerWidth,
@@ -165,5 +165,3 @@ const styles = StyleSheet.create({
     height: 2
   }
 });
-
-export default SegmentControl;
