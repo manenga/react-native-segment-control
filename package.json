@@ -1,6 +1,6 @@
 {
   "name": "react-native-tabbed-control",
-  "version": "1.1.8",
+  "version": "1.1.9",
   "description": "Swipeable tab bar control component for React Native apps.",
   "main": "index.js",
   "scripts": {
