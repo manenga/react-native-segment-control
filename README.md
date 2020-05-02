@@ -5,7 +5,7 @@
 
 ## Demo
 
-<img src="https://github.com/ainurb/react-native-segment-control/blob/master/example/example1.gif" width="30%" /> <img src="https://github.com/ainurb/react-native-segment-control/blob/master/example/example2.gif" width="30%" />
+<img src="https://github.com/manenga/react-native-tabbed-control/blob/f9102583d0fc93b9fae6c2e4ef2dda6954b84f8e/tab-demo.gif?raw=true" width="30%" /> 
 
 ## Installation
 
