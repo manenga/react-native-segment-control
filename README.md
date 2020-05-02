@@ -1,9 +1,7 @@
-# react-native-segment-control
+# react-native-tabbed-control
 
 [![Platform](https://img.shields.io/badge/platform-react--native-lightgrey.svg)](http://facebook.github.io/react-native/)
-[![npm version](http://img.shields.io/npm/v/react-native-segment-control.svg)](https://www.npmjs.com/package/react-native-segment-control)
-[![npm downloads](https://img.shields.io/npm/dm/react-native-segment-control.svg?update=7)](http://badge.fury.io/js/react-native-segment-control)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.github.com/testshallpass/react-native-segment-control/master/LICENSE)
+[![npm version](http://img.shields.io/npm/v/react-native-segment-control.svg)](https://www.npmjs.com/package/react-native-tabbed-control)
 
 ## Demo
 
@@ -12,23 +10,40 @@
 ## Installation
 
 ```
-$ npm install react-native-segment-control --save
+$ npm install react-native-tabbed-control --save
 ```
 
-## Example
+## Example Without Attached Views
 
 ```JSX
-import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import SegmentControl from 'react-native-segment-control';
+...
+import TabbedControl from 'react-native-tabbed-control';
 
-const One = () => {
-  return <Text style={styles.text}>This is first view</Text>;
+const tabs = [{title: 'South Africa'} , {title: 'Zambia'}];
+
+updateIndex(selectedIndex) {
+  this.setState({selectedIndex: selectedIndex});
+}
+  
+render() {
+  return (
+    <View>
+      <TabbedControl tabs={tabs} color={'#024b30'} onIndexChange={this.updateIndex}/>
+    </View>
+  );
 };
-const Two = () => {
-  return <Text style={styles.text}>This is second view</Text>;
-};
-const segments = [
+```
+
+## Example With Static Views Attached
+
+```JSX
+...
+import TabbedControl from 'react-native-tabbed-control';
+
+const One = () => { return <Text>This is first view</Text>; };
+const Two = () => { return <Text>This is second view</Text>; };
+
+const tabs = [
   {
     title: 'One',
     view: One
@@ -38,30 +53,29 @@ const segments = [
     view: Two
   }
 ];
-const App = () => {
+
+render() {
   return (
     <View style={styles.container}>
-      <SegmentControl segments={segments} />
+      <TabbedControl tabs={tabs} color={'#024b30'} />
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#F5F7FA',
-    justifyContent: 'center'
-  },
-  text: {
-    alignSelf: 'center',
-    margin: 50
-  }
-});
-
-export default App;
 ```
 
-## TO-DO's:
+## Tab Properties
+| Property | Type | isRequired |
+| --- | --- | --- |
+| title | String | YES |
+| view | View | NO |
 
-- [ ] Add background color property
+## TabbedControl Properties
+| Property | Type | isRequired |
+| --- | --- | --- |
+| tabs | Tab Array | NO |
+| color | Color | NO |
+| onIndexChange | Function | NO |
+
+## TO-DO's:
 - [ ] Add icons as tab titles
+- [ ] Update selected index on scroll
